@@ -1,0 +1,5 @@
+URL and method:
+POST http://localhost:5090/api/accounts/login
+body (json):
+{"username":"john Mann",
+"password":"123456"}
