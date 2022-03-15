@@ -1,5 +1,47 @@
+8.3.22
 URL and method:
 POST http://localhost:5090/api/accounts/login
+header:
+Content-Type
+	|-value: application/json
 body (json):
 {"username":"john Mann",
 "password":"123456"}
+
+15.3.22
+
+POST [http://localhost:5090/api/accounts/signup]
+	|- [header: Content-Type]
+	|	|- [application/json]
+	\- body (json)
+		\-	{"email": "smith@hotmail.com",
+			"username": "smithy",
+			"password": "111111"}
+note: if email is not in the system, and there isn't a missing field, creates a user and stores
+it
+
+POST [http://localhost:5090/api/accounts/login]
+	|- [header: Content-Type]
+	|	|- [application/json]
+	\- body (json)
+		\-	{"email": "smith@hotmail.com",
+			"username": "smithy",
+			"password": "111111"}
+
+note: if email and password match, return token. return error messages approprietly (username
+not required).
+
+
+
+
+
+
+
+
+
+template:
+Url and method:
+*POST [url]
+	|- [header: header type]
+	|	|- [header value]
+	\- [body (json/xml/plain)]

@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));     //extended: true added from online, not lesson
 app.use(bodyParser.json());
 
 const accountRoute=require('./controllers/accounts.js');
